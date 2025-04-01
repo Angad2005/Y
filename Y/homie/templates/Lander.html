@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to X</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f9f9;
+            text-align: center;
+        }
+
+        .welcome-container {
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            height: 60px; /* Adjust size as needed */
+        }
+
+        h1 {
+            color: #1d9bf0;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .button-group a, .button-group button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .login-button {
+            background-color: #1d9bf0;
+            color: white;
+        }
+
+        .login-button:hover {
+            background-color: #1a8cd8;
+        }
+
+        .signup-button {
+            background-color: #e8f5fe;
+            color: #1d9bf0;
+            border: 1px solid #1d9bf0;
+        }
+
+        .signup-button:hover{
+            background-color: #d0ebff;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="logo">
+            <img src="/media/imag/Y.png" alt="X Logo">
+        </div>
+        <h1>Welcome to Y</h1>
+        <p>Connect with your friends — and other fascinating people. Watch events unfold, in real time, from every side.</p>
+        <div class="button-group">
+            <a class="login-button" href="{% url 'login' %}" >Next</a>
+        </div>
+    </div>
+</body>
+</html>
