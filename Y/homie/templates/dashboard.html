@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.username }} Dashboard{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="{% url 'create_post' %}" style="color: white;">Create New Post</a>
+<ul class="list-group">
+    {% for post in posts %}
+        <li class="list-group-item">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <form action="{% url 'delete_post' post.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
